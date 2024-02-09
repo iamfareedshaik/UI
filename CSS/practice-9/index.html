@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #5751b4;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            color: #E0F7FA;
+            font-weight: bold;
+            padding: 10px;
+            margin-right: 20px;
+        }
+
+        .title {
+            font-size: 24px;
+            margin: 0;
+            color: #E0F7FA;
+        }
+
+        .tabs {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            max-width: 60%;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .tab {
+            color: #E0F7FA;
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 10px;
+            transition: border-bottom 0.3s ease;
+        }
+
+        .tab:hover {
+            border-bottom: 2px solid #E0F7FA;
+        }
+
+        .bars-icon {
+            display: none;
+            cursor: pointer;
+            color: #E0F7FA;
+            font-size: 1.5rem;
+            margin-right: 1rem;
+        }
+
+        @media (max-width: 800px) {
+            .bars-icon {
+                display: block;
+            }
+
+            .tabs {
+                display: none;
+                flex-direction: column;
+                background-color: rgba(87, 81, 180, 0.8);
+                width: 100%;
+                position: absolute;
+                top: 70px;
+                left: 0;
+            }
+
+            .tab {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="brand">
+            <div class="logo">Fareed Shaik</div>
+            <div class="title"><span class="subtitle">Master's in Information Science</span></div>
+        </div>
+        <i class="fa fa-bars bars-icon" aria-hidden="true" onclick="toggleMenu()"></i>
+        <ul class="tabs">
+            <li><a href="#skills" class="tab">Skills</a></li>
+            <li><a href="#experience" class="tab">Experience</a></li>
+            <li><a href="#education" class="tab">Education</a></li>
+            <li><a href="#portfolio" class="tab">Portfolio</a></li>
+            <li><a href="#contact" class="tab">Contact</a></li>
+        </ul>
+    </header>
+
+    <!-- Your content goes here -->
+
+    <script>
+        function toggleMenu() {
+            const tabs = document.querySelector('.tabs');
+            tabs.style.display = (tabs.style.display === 'none' || tabs.style.display === '') ? 'flex' : 'none';
+        }
+    </script>
+</body>
+
+</html>
